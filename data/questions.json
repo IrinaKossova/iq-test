@@ -1,0 +1,127 @@
+{
+  "questions": [
+    {
+      "questionText": "Ваш пол:",
+      "answerType": "text",
+      "answers": [
+        { "value": "male", "text": "Мужчина" },
+        { "value": "female", "text": "Женщина" }
+      ]
+    },
+    {
+      "questionText": "Укажите ваш возраст:",
+      "answerType": "text",
+      "answers": [
+        { "value": "under18", "text": "До 18" },
+        { "value": "18-28", "text": "От 18 до 28" },
+        { "value": "29-35", "text": "От 29 до 35" },
+        { "value": "36+", "text": "От 36" }
+      ]
+    },
+    {
+      "questionText": "Выберите лишнее:",
+      "answerType": "text",
+      "answers": [
+        { "value": "house", "text": "Дом" },
+        { "value": "hut", "text": "Шалаш" },
+        { "value": "bungalow", "text": "Бунгало" },
+        { "value": "bench", "text": "Скамейка" },
+        { "value": "cabin", "text": "Хижина" }
+      ]
+    },
+    {
+      "questionText": "Продолжите числовой ряд: 18 20 24 32",
+      "answerType": "text",
+      "answers": [
+        { "value": "62", "text": "62" },
+        { "value": "48", "text": "48" },
+        { "value": "74", "text": "74" },
+        { "value": "57", "text": "57" },
+        { "value": "60", "text": "60" },
+        { "value": "77", "text": "77" }
+      ]
+    },
+    {
+      "questionText": "Выберите цвет, который сейчас наиболее вам приятен:",
+      "answerType": "colors",
+      "answers": [
+        { "value": "color1", "color": "#a8a8a8" },
+        { "value": "color2", "color": "#0000a9" },
+        { "value": "color3", "color": "#00a701" },
+        { "value": "color4", "color": "#f60100" },
+        { "value": "color5", "color": "#fdff19" },
+        { "value": "color6", "color": "#a95403" },
+        { "value": "color7", "color": "#000000" },
+        { "value": "color8", "color": "#850068" },
+        { "value": "color9", "color": "#46b2ac" }
+      ]
+    },
+    {
+      "questionText": "Отдохните пару секунд, еще раз выберите цвет, который сейчас наиболее вам приятен:",
+      "answerType": "colors",
+      "answers": [
+        { "value": "color1", "color": "#a8a8a8" },
+        { "value": "color9", "color": "#46b2ac" },
+        { "value": "color6", "color": "#a95403" },
+        { "value": "color3", "color": "#00a701" },
+        { "value": "color7", "color": "#000000" },
+        { "value": "color4", "color": "#f60100" },
+        { "value": "color8", "color": "#850068" },
+        { "value": "color5", "color": "#fdff19" },
+        { "value": "color2", "color": "#0000a9" }
+      ]
+    },
+    {
+      "questionText": "Какой из городов лишний?",
+      "answerType": "text",
+      "answers": [
+        { "value": "washington", "text": "Вашингтон" },
+        { "value": "london", "text": "Лондон" },
+        { "value": "paris", "text": "Париж" },
+        { "value": "newyork", "text": "Нью-Йорк" },
+        { "value": "moscow", "text": "Москва" },
+        { "value": "ottawa", "text": "Оттава" }
+      ]
+    },
+    {
+      "questionText": "Выберите правильную фигуру из четырёх пронумерованных. <img src='/img/test/q8.png' alt='question 8'>",
+  "answerType": "number_squares",
+  "answers": [
+    { "value": "1", "text": "1" },
+    { "value": "2", "text": "2" },
+    { "value": "3", "text": "3" },
+    { "value": "4", "text": "4" }
+  ]
+    },
+    {
+      "questionText": "Вам привычнее и важнее:",
+      "answerType": "text",
+      "answers": [
+        { "value": "enjoy_moment", "text": "Наслаждаться каждой минутой проведенного времени" },
+        { "value": "future_oriented", "text": "Быть устремленными мыслями в будущее" },
+        { "value": "past_experience", "text": "Учитывать в ежедневной практике прошлый опыт" }
+      ]
+    },
+    {
+      "questionText": "Какое определение, по-Вашему, больше подходит к этому геометрическому изображению: <img src='/img/test/q10.png' alt='question 10'>",
+      "answerType": "text",
+      "answers": [
+        { "value": "sharp", "text": "Оно остроконечное" },
+        { "value": "stable", "text": "Оно устойчиво" },
+        { "value": "balanced", "text": "Оно находится в состоянии равновесия" }
+      ]
+    },
+    {
+  "questionText": "Вставьте подходящее число. <img src='/img/test/q11.png' alt='question 11'><hr>",
+  "answerType": "number_squares",
+  "answers": [
+    { "value": "34", "text": "34" },
+    { "value": "36", "text": "36" },
+    { "value": "53", "text": "53" },
+    { "value": "44", "text": "44" },
+    { "value": "66", "text": "66" },
+    { "value": "42", "text": "42" }
+      ]
+    }
+  ]
+}

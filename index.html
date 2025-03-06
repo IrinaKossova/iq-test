@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+  
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto:wght@200;400;700&family=Roboto+Mono:wght@200;400;700&family=Yeseva+One&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      IQ Тест
+    </title>
+    <meta name="description" content="Пройдите точный и быстрый тест на IQ и получите рекомендации по развитию своего интеллекта и улучшению личной жизни.">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/loading-results.css">
+  </head>
+  
+  
+  <body>
+    <!-- ШАПКА -->
+    <header class="header">
+    <!-- Бургер-меню -->
+      <div class="header__burger">
+        <a href="#menu-page" class="header__burger-link">
+        <img class="header__burger-icon" src="img/svg/burger-icon.svg" alt="Burger Icon">
+      </a>
+      </div>
+      <!-- Иконка -->
+      <div class="header__image-wrapper">
+        <img src="img/png/brain-icon.png" alt="Brain">
+      </div>
+      <!-- Заголовки -->
+       <div class="header__text">
+      <p class="header__title--shared">ТЕСТ НА ОПРЕДЕЛЕНИЕ IQ</p>
+      <p class="header__title-result header__title--shared">ГОТОВО!</p> 
+      </div>
+    </header>
+
+
+    <main>
+      <!-- СЕКЦИЯ МЕНЮ -->
+      <!-- Иконка закрытия -->
+      <section id="menu-page">
+      <div class="overlay overlay--hidden" id="menu-overlay">
+        <a href="#landing-page" id="close-button">
+          <img src="img/svg/close-icon.svg" alt="Close">
+        </a>
+      <!-- Ссылки -->
+        <nav class="menu">
+          <a href="#landing-page" class="menu__item">Главная</a>
+          <a href="#info-page" class="menu__item">Информация о тесте</a>
+          <a href="#test-page" class="menu__item menu__item--highlighted">Пройти тест</a>
+        </nav>
+      </div>
+      </section>
+
+
+<!-- ГЛАВНАЯ СТРАНИЦА -->
+<section id="landing-page" style="display: flex;" class="landing-page-shadow">
+  <main class="landing-content">
+    <div class="landing-content__wrapper"> 
+      <!-- Верхний текст -->
+      <p class="landing__text--top">Пройдите точный и быстрый</p>
+      <!-- Заголовок -->
+      <h1>
+        ТЕСТ НА
+        <br>
+        ОПРЕДЕЛЕНИЕ
+        <br>
+        IQ
+      </h1>
+      <!-- Изображение -->
+      <div class="landing-content__image-container">
+        <img class="landing-content__image" src="/img/png/brain.png" alt="Мозг">
+      </div>
+      <!-- Кнопка -->
+      <div>
+        <a href="#test-page" class="button--active">
+          ПРОЙТИ ТЕСТ
+        </a>
+        <!-- Нижний текст -->
+        <p class="landing-content__bottom">
+          <span class="landing-content__bottom--yellow">
+            И получите рекомендации по развитию своего интеллекта
+          </span>
+          <br>
+          и улучшению финансового благосостояния и личной жизни
+        </p>
+      </div>
+    </div>
+  </main>
+  <!-- Подвал -->
+  <footer class="landing-footer">
+    <!-- Иконка -->
+    <div class="landing-footer__icon">
+      <img class="landing-footer__icon" src="img/svg/arrow-icon.svg" alt="Arrow">
+    </div>
+    <!-- Ссылка -->
+    <div class="landing-footer__details">
+      <p class="landing-footer__details-text">
+        <a class="landing-footer__details-text" href="#info-page">
+          Подробнее
+        </a>
+      </p>
+    </div>
+  </footer>
+</section>
+
+<!-- ШКАЛА прогресса в тесте -->
+<div class="progress-bar-container"  style="display: none;">
+<!-- Шкала -->
+  <svg width="260" height="11" viewBox="0 0 260 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Наполнитель -->
+    <rect id="progress-fill" rx="5.5" x="0" y="0" width="0" height="11" fill="#3BDE7C" />
+    <rect opacity="0.3" width="260" height="11" rx="5.5" fill="#F2F3F3" />
+  </svg>
+</div>
+
+        <!-- СЕКЦИЯ ТЕСТОВ -->
+        <section id="test-page">
+          <div class="test-container">
+            <!-- Вопрос -->
+            <div class="question-container">
+              <h2 class="question-text"><img src=""></h2>
+              <!-- Контейнер для ответов -->
+              <div class="answer-container">
+              </div>
+              <!-- Ошибка -->
+              <div class="error-message" id="error-message"></div>
+              <!-- Кнопка -->
+              <label for="next-button" class="next-button-style"> 
+                <input type="submit" id="next-button" style="display:none;" />
+                Далее
+              </label>
+            </div>
+          </div>
+        </section>
+
+        
+    <!-- СЕКЦИЯ ЗАГРУЗКИ РЕЗУЛЬТАТА -->
+    <section id="loading-results-page" style="display: none;">
+      <div class="loading-results-container">
+        <p class="question-text loading-results-question-text">Обработка результатов</p>
+        <!-- Анимированный индикатор загрузки) -->
+        <div class="loading-results-container__spinner">
+          <img src="./img/svg/spinner.svg" alt="Spinner">
+        </div>
+        <!-- Текст, отображающий прогресс загрузки -->
+        <p class="loading-results-container__text answer-text loading-results-answer-text">
+          Определение стиля мышления<span class="dots">....................</span>
+        </p>
+      </div>
+    </section>
+<section id="results-page" style="display: none;" class="results-page">
+  <div class="container">
+    <h1 class="container__title">ВАШ РЕЗУЛЬТАТ РАССЧИТАН:</h1>
+    <p class="header__description"><span>Вы относитесь к 3%</span> респондентов, чей уровень интеллекта более чем на 15
+      пунктов отличается от среднего в
+      большую или меньшую сторону!</p>
+
+    <div class="main-content">
+      <h2 class="main-content__title">СКОРЕЕ ПОЛУЧИТЕ СВОЙ РЕЗУЛЬТАТ!</h2>
+      <div class="description-box">
+        <p class="description-box__text">В ЦЕЛЯХ ЗАЩИТЫ ПЕРСОНАЛЬНЫХ ДАННЫХ РЕЗУЛЬТАТ ТЕСТА, ИХ ПОДРОБНАЯ
+          ИНТЕРПРЕТАЦИЯ И РЕКОМЕНДАЦИИ ДОСТУПНЫ В ВИДЕ
+          ГОЛОСОВОГО СООБЩЕНИЯ ПО ЗВОНКУ С ВАШЕГО МОБИЛЬНОГО ТЕЛЕФОНА</p>
+      </div>
+    </div>
+
+    <div class="call-to-action">
+      <p class="call-to-action__text">Звоните скорее, запись доступна всего <span class="call-to-action__highlight"
+          id="timer">10:00</span> минут</p>
+      <button class="call-button" id="callButton">
+        <img src="/img/svg/call.svg" alt="Иконка звонка">
+        </svg>
+        Позвонить и прослушать результат
+      </button>
+    </div>
+    <!-- Контейнер для отображения данных -->
+<div id="dataContainer"></div> 
+    <footer class="footer">
+      TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI CA AVETI 18 ANI
+      IMPLINITI
+    </footer>
+  </div>
+</section>
+
+
+<!-- СЕКЦИЯ СПРАВОЧНИКА -->
+    <section id="info-page">
+        <div class="info-container">
+    <!-- ПЕРВАЯ подсекция справочника -->
+            <div class="info-container__section info-container__section--1">
+              <!-- Верхняя кавычка -->
+                <img class="info-container__quote-svg info-container__quote-svg--top-left" src="img/svg/quote-icon.svg" alt="Quote">
+                <!-- Текст -->
+                <p class="info-container__text">Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и выработать список рекомендаций для повышения этого показателя.</p>
+                <!-- Нижняя кавычка -->
+                <img class="info-container__quote-svg info-container__quote-svg--bottom-right" src="img/svg/quote-icon.svg"
+                  alt="Quote">
+            </div>
+
+    <!-- ВТОРАЯ подсекция справочника -->
+            <div class="info-container__section info-container__section--2">
+              <!-- Текст -->
+                <p class="info-container__detailed-text">
+                    Также по результатам теста
+                    <span class="info-container__prominent-text info-container__prominent-text--uppercase">вы получите</span> подробные <span class="info-container__prominent-text info-container__prominent-text--uppercase">советы</span> по определению наиболее перспективной <span class="info-container__prominent-text info-container__prominent-text--uppercase">для вашего типа</span> <span class="info-container__prominent-text">интеллекта</span> <span class="info-container__prominent-text info-container__prominent-text--uppercase">сферы деятельности</span>,
+                    которая принесет вам скорейший финансовый результат.
+                </p>
+                <!-- Изображение -->
+                <img src="/img/png/advice.png" alt="Мозг" class="info-container__advice-image">
+                <!-- Кнопка -->
+                <a href="#test-page" class="button--active">
+                  Пройти тест
+                </a>
+              </div>
+
+
+    <!-- ТРЕТЬЯ подсекция справочника -->
+            <div class="info-container__section info-container__section--3">
+              <!-- Верхняя молния -->
+              <div class="info-container__lightning info-container__lightning--top"></div>
+              <div class="info-container__block">
+                <!-- Верхний текст -->
+                <p>Прохождение теста займет у вас не более <span
+                    class="info-container__top-text">12 минут</span>, а его результаты вы сможете <span
+                    class="info-container__top-text">использовать всю жизнь.</span></p>
+              </div>
+            <!-- Нижний текст -->
+              <div class="info-container__description">
+                <p>Профессиональная интерпретация и детально <span
+                    class="info-container__highlight">проработанные рекомендации</span> позволят вам качественно <span
+                    class="info-container__highlight">изменить все аспекты своей жизни</span>: от финансового до любовного.</p>
+              </div>
+            <!-- Кнопка -->
+              <a href="#test-page" class="button" id="button--info">Пройти тест</a>
+            <!-- Нижняя молния -->
+              <div class="info-container__lightning info-container__lightning--bottom"></div>
+              <!-- Подвал -->
+              <footer class="info-container__footer">
+                <p class="info-container__year">© 2019</p>
+              </footer>
+            </div>
+            </div>
+</section>
+    </main>
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/test-component.js"></script>
+    <script type="module" src="js/test-question.js"></script>
+    <script type="module" src="js/progress-bar.js"></script>
+    <script type="module" src="js/test-css.js"></script>
+    <script type="module" src="js/api.js"></script>
+  </body>
+</html>

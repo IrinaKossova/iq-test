@@ -1,0 +1,181 @@
+/* Общие стили */
+
+.info-container__text {
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.info-container__advice-image {
+    display: block;
+    width: 16em;
+    height: 13em;
+    margin-bottom: -2em;
+    object-fit: cover;
+}
+
+/* Секции */
+
+.info-container__section--1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background-image: url("/img/png/info-bg-1.png"), url("/img/png/info-bg-2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info-container__section--2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1em;
+    background-color: white;
+}
+
+.info-container__section--3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1em;
+    flex: 1;
+    box-sizing: border-box;
+    color: white;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Текст в секциях */
+
+/* Секция 1 */
+.info-container__text {
+    font: 400 1.15em/1.28em var(--second-family);
+    text-align: center;
+    max-width: 90%;
+    padding: 0 1em;
+    letter-spacing: 0.06em;
+}
+
+/* Секция 2: Общий текст */
+.info-container__detailed-text {
+    font: 400 1em/1.5em var(--font-family);
+    color: #272727;
+    text-align: left;
+    margin-bottom: 2em;
+    letter-spacing: 0.05em;
+}
+
+/* Секция 2: Выделенный текст */
+.info-container__prominent-text {
+    font-weight: 700;
+}
+
+/* Секция 2: Выделенный текст в верхнем регистре */
+.info-container__prominent-text--uppercase {
+    text-transform: uppercase;
+}
+
+/* Секция 3: Верхний текст */
+.info-container__block {
+    color: inherit;
+    text-align: left;
+    margin-bottom: 3em;
+    max-width: 90%;
+    font: 400 0.9em/1em var(--third-family);
+    letter-spacing: 0.05em;
+}
+
+/* Секция 3: Выделенный верхний текст */
+.info-container__top-text {
+    font-weight: 900;
+    color: var(--color-accent);
+}
+
+/* Секция 3: Нижний текст */
+.info-container__description {
+    background: rgba(243, 243, 242, 0.8);
+    border-radius: 1.25em;
+    padding: 0.9em 0.8em;
+    margin-bottom: 2em;
+    width: 90%;
+    font: 400 1em/1.5em var(--third-family);
+    color: #181818;
+    text-align: left;
+    letter-spacing: 0.05em;
+}
+
+/* Секция 3: Выделенный нижний текст */
+.info-container__highlight {
+    font-weight: 700;
+    max-width: 90%;
+}
+
+/* Изображения в секциях */
+
+/* Кавычки */
+.info-container__quote-svg {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    fill: #fff;
+}
+
+.info-container__quote-svg--top-left {
+    top: 4em;
+    left: 2em;
+}
+
+.info-container__quote-svg--bottom-right {
+    bottom: 5em;
+    right: 5em;
+    transform: scale(-1, -1);
+}
+
+/* Молнии */
+.info-container__lightning--top,
+.info-container__lightning--bottom {
+    position: absolute;
+    width: 22em;
+    height: 15em;
+    background-image: url("/img/png/lightning.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1.5em;
+    z-index: 3;
+    box-sizing: border-box;
+    display: block;
+    object-fit: cover;
+}
+
+.info-container__lightning--top {
+    top: 4.5em;
+    right: -13em;
+    transform: rotate(1deg);
+}
+
+.info-container__lightning--bottom {
+    bottom: 1em;
+    left: -14em;
+    width: 24em;
+    height: 18em;
+    transform: rotate(-180deg) scaleY(-1);
+    z-index: 2;
+}
+
+/* Подвал */
+
+.info-container__footer {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.info-container__year {
+    font: 200 0.8em var(--font3);
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.03em;
+    margin-top: 4em;
+}

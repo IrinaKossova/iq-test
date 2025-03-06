@@ -1,0 +1,35 @@
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 3rem;
+  padding: 0 1rem;
+  background: #181818;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Стили для бургер-меню */
+.header__burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Стили для заголовков */
+.header__title--shared {
+  color: var(--color-accent);
+  font-family: var(--second-family);
+  margin-left: 1rem;
+}
+
+/* Доп. стили для заголовка в секции результата */
+.header__title-result {
+  font-size: 1.5em;
+  margin-left: 1em;
+}

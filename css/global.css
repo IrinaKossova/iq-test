@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Переменные CSS */
+:root {
+  --font-family: "PT Serif", sans-serif;
+  --second-family: "Yeseva One", sans-serif;
+  --third-family: "Merriweather", sans-serif;
+  --font3: "Roboto Mono", sans-serif;
+  --font4: "Roboto", sans-serif;
+
+  --color-accent: #FFD700;
+  --color-default: #FFFFFF;
+}
+
+/* Общие стили */
+html,
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background: #181818 url(/img/png/background.png) no-repeat center center/cover;
+  height: 100%;
+  overflow-x: hidden;
+  color: var(--color-default);
+}
+

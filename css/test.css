@@ -1,0 +1,180 @@
+/* Шкала прогресса */
+.progress-bar-container {
+    margin-top: 0.5em;
+    margin-bottom: -3em;
+    text-align: center;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    display: none;
+    margin-bottom: 4em;
+}
+
+/* Контейнер теста */
+.test-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -3em auto;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* ВОПРОС */
+
+/* Контейнер вопроса */
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Текст вопроса */
+.question-text {
+    font: 400 1.3em/1.5 var(--font-family);
+    text-align: left;
+    letter-spacing: 0.05em;
+    padding-left: 2em;
+    padding-right: 1em;
+}
+
+/* Изображение + текст */
+h2.question-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Изображение в вопросе */
+h2.question-text img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1em;
+}
+
+/* ОТВЕТ */
+
+/* Контейнер ответов */
+.answer-container {
+    width: 100vw;
+}
+
+/* Текст ответа */
+.answer-text {
+    font: 400 1em/1.5 var(--font-family);
+    text-align: left;
+    letter-spacing: 0.05em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+/* Опции ответа */
+.answer-option {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 3em;
+    background: rgba(242, 243, 243, 0.15);
+    cursor: pointer;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    position: relative;
+}
+
+/* Кнопка выбора */
+input[type="radio"] {
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Опции: выбрано */
+.answer-options :has(input[type="radio"]:checked) {
+    background: var(--color-accent);
+}
+
+/* Кружок в ответе */
+.answer-option img {
+    margin-right: 0.5em;
+}
+
+/* ЦВЕТОВЫЕ КВАДРАТЫ */
+
+/* Размещение */
+.color-option {
+    display: inline-block;
+    margin: 0.6em;
+}
+
+/* Размеры, стиль */
+.color-box {
+    width: 18vw;
+    height: 18vw;
+    border: 0.1em solid #ccc;
+    display: block;
+    cursor: pointer;
+}
+
+/* Скрыть кнопку */
+input[type="radio"] {
+    display: none;
+}
+
+/* Выделение квадрата */
+input[type="radio"]:checked+.color-box {
+    border: 0.4em solid var(--color-accent);
+}
+
+/* Дополнительная обводка для желтого квадрата */
+.color-box.yellow-selected {
+    box-shadow: inset 0 0 0 0.1em black;
+}
+
+/* Центрирование */
+.color-answer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 25em;
+    padding: 1em;
+    text-align: center;
+}
+
+/* БЕЛЫЕ КВАДРАТЫ */
+
+/* Квадраты в линию */
+.number-square-options {
+    display: flex;
+    justify-content: center;
+}
+
+/* Отступ */
+.number-square-option {
+    margin: 0 0.5em;
+}
+
+/* Стиль квадрата */
+.number-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8em;
+    height: 2.8em;
+    background-color: white;
+    border: 0.1em solid #ccc;
+    border-radius: 0.3em;
+    font-size: 1em;
+    color: black;
+}
+
+/* Выделение */
+.number-square-option input[type="radio"]:checked+span.number-square {
+    border: 0.4em solid var(--color-accent);
+}

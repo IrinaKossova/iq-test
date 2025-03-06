@@ -1,0 +1,52 @@
+/* --- Невыбранная кнопка --- */
+[class*="button"] {
+    width: 60%;
+    max-width: none;
+    box-sizing: border-box;
+    min-width: 12rem;
+    height: 3rem;
+    margin-top: 2em;
+    font: 700 1em var(--font-family);
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    background: #dadada;
+    border-radius: 1.25em;
+    box-shadow: inset 0 0.25em 0.6em rgba(0, 0, 0, 0.25);
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    z-index: 2;
+} 
+
+/* --- Кнопка в секции справочника --- */
+#button--info {
+    background-color: transparent;
+    border: 0.5px solid #fff;
+    color: #fff;
+    z-index: 4;
+}
+
+/* --- Кнопка в тестах --- */
+.next-button-style {
+    background: #dadada;
+    color: #8e8e8e;
+    position: fixed;
+    bottom: 1em;
+}
+
+/* --- Выбранная кнопка --- */
+.button--active {
+    outline: none;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #000;
+    background: var(--color-accent);
+    box-shadow: none;
+}

@@ -1,0 +1,87 @@
+/* Общие стили для контейнера загрузки результатов */
+.loading-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25em;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Стили для спиннера */
+.loading-results-container__spinner img {
+    width: 4em;
+    height: 4em;
+    animation: rotate-svg 1.2s linear infinite;
+    transform-origin: center;
+}
+
+/* Отступ для спиннера в контейнере */
+.loading-results-container__spinner {
+    margin-bottom: 1.8em;
+}
+
+/* Анимация вращения спиннера */
+@keyframes rotate-svg {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Отступы для элементов внутри контейнера (кроме последнего) */
+.loading-results-container>* {
+    margin-bottom: 0.9em;
+}
+
+.loading-results-container>*:last-child {
+    margin-bottom: 0;
+}
+
+/* Стили для текста вопроса при загрузке */
+.loading-results-question-text {
+    font-size: 1.5em;
+    line-height: 1.2;
+    word-break: break-word;
+    margin-bottom: 1.8em;
+    margin-top: 3em;
+    text-align: center;
+}
+
+/* Стили для текста ответа при загрузке */
+.loading-results-answer-text {
+    font-size: 0.75em;
+    font-weight: bold;
+    font-size: normal;
+}
+
+/* Позиционирование страницы загрузки результатов */
+#loading-results-page {
+    position: fixed;
+    top: 20vh;
+}
+
+/* Cтили для анимации точек */
+.dots {
+    display: inline-block;
+    width: 2em;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    animation: animate-dots 1.5s steps(20, end) infinite;
+}
+
+/* Анимация для отображения точек */
+@keyframes animate-dots {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 2em;
+    }
+}

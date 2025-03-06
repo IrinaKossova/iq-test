@@ -1,0 +1,160 @@
+/* Контейнер */
+.container {
+    width: 80%;
+    max-width: 38em;
+    margin: 0 auto;
+    padding: 1.25em;
+    box-sizing: border-box;
+    text-align: center;
+    display: grid;
+    min-height: 100vh;
+}
+
+/* Заголовок контейнера */
+.container__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 107%;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.6em;
+    white-space: nowrap;
+}
+
+/* Текст */
+.header__description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 129%;
+    text-align: center;
+}
+
+.header__description span {
+    text-decoration: underline;
+}
+
+/* Главный контент */
+.main-content__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 122%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3bde7c;
+}
+
+/* Бокс с описанием */
+.description-box {
+    border-radius: 0.3em;
+    width: 16em;
+    height: 7em;
+    background: #1c2741;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em;
+    box-sizing: border-box;
+}
+
+.description-box__text {
+    font-family: var(--font4);
+    font-weight: 500;
+    font-size: 0.5em;
+    line-height: 175%;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+/* Призыв к действию */
+.call-to-action__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 273%;
+    text-align: center;
+    color: #3bde7c;
+}
+
+.call-to-action__highlight {
+    font-size: 2em;
+    color: #3bde7c;
+}
+
+/* Кнопка */
+.call-button {
+    font-family: var(--font4);
+    font-weight: 900;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    color: white;
+    border-radius: 0.3em;
+    width: auto;
+    height: 6em;
+    background: #eb1b00;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5em auto 0;
+    text-transform: none;
+    gap: 0.5em;
+    margin-top: 0;
+    margin-bottom: 4em;
+    position: relative;
+    z-index: 2;
+}
+
+.call-button img {
+    width: 2em;
+    height: 2em;
+}
+
+/* Подвал */
+.footer {
+    font-family: var(--font4);
+    font-weight: 400;
+    font-size: 0.4em;
+    line-height: 129%;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: auto;
+}
+
+/* Молнии */
+.call-to-action {
+    position: relative;
+}
+
+.call-to-action::before,
+.call-to-action::after {
+    content: "";
+    position: absolute;
+    width: 12em;
+    height: 10em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.call-to-action::before {
+    top: 4em;
+    left: -10em;
+    background-image: url('/img/png/lightning.png');
+    transform: scaleX(-1);
+}
+
+.call-to-action::after {
+    bottom: -1em;
+    right: -10em;
+    background-image: url('/img/png/lightning.png');
+}
+
